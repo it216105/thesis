@@ -1,0 +1,29 @@
+
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h2>User List</h2>
+              </div>
+              <div class="panel-body">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Subject</th>
+                      <th>type</th>
+                      <th>Teacher</th>
+                      <th>Keywords</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let thes of thesis">
+                      <td>{{thes.subject}}</td>
+                      <td>{{thes.type}}</td>
+                      <td>{{thes.teacher}}</td>
+                      <td>{{thes.keyWords}}</td>
+                      <td><button (click)="choseThesis(thes.id)" class="btn btn-danger">Choose</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <app-logout></app-logout>
